@@ -36,10 +36,7 @@ void ABeamFlowerBase::OnBeginInteract_Implementation(FHitResult BeamHitResult, c
 
 void ABeamFlowerBase::OnEndInteract_Implementation()
 {
-	if (!bIsChangingStatus)
-	{
-		return;
-	}
+	if (!bIsChangingStatus) return;
 	bHasBloomed ? PlayBloomAnimForward() : PlayBloomAnimReverse();
 }
 
